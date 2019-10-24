@@ -20,5 +20,9 @@ return [
     },
     \Psr\Http\Message\ResponseInterface::class => function(){
         return new \Jasny\HttpMessage\Response;
-    }
+    },
+    \App\Repository\ProductRepositoryInterface::class => 
+        \DI\autowire(\App\Repository\ProductRepository::class),
+    \App\Product\ProductInterface::class =>
+        \DI\autowire(\App\Product\Product::class),
 ];

@@ -1,0 +1,22 @@
+{
+    "ipd": {
+        "name": "Super iPad",
+        "price": 549.99,
+        "currency": "USD"
+    },
+    "mbp": {
+        "name": "MacBook Pro",
+        "price": 1399.99,
+        "currency": "USD"
+    },
+    "atv": {
+        "name": "Apple TV",
+        "price": 109.50,
+        "currency": "USD"
+    },
+    "vga": {
+        "name": "VGA adapter",
+        "price": 30.00,
+        "currency": "USD"
+    }
+}
