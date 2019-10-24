@@ -10,6 +10,11 @@ class CheckoutBasket
      */
     private $products = [];
 
+
+    /**
+     * @param ProductInterface $product
+     * @return self
+     */
     public function add(ProductInterface $product)
     {
         if (!array_key_exists($product->getSku(), $this->products)) {
@@ -17,6 +22,8 @@ class CheckoutBasket
         }
 
         $this->products[$product->getSku()][] = $product;
+
+        return $this;
     }
 
     /**

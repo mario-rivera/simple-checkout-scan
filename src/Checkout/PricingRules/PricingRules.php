@@ -16,6 +16,11 @@ class PricingRules
     ) {
         $this->productRepository = $productRepository;
     }
+
+    /**
+     * @param CheckoutBasket $checkoutBasket
+     * @return void
+     */
     public function applyRules(CheckoutBasket $checkoutBasket)
     {
         foreach ($checkoutBasket->getProducts() as $sku => $products) {
@@ -36,6 +41,7 @@ class PricingRules
 
     /**
      * @param ProductRepositoryInterface[]
+     * @return void
      */
     public function applyAtvRules(array $products)
     {
@@ -53,6 +59,7 @@ class PricingRules
 
     /**
      * @param ProductRepositoryInterface[]
+     * @return void
      */
     public function applyIpadRules(array $products)
     {

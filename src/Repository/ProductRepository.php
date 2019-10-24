@@ -19,6 +19,10 @@ class ProductRepository implements
         $this->memoryStore = $memoryStore;
     }
 
+    /**
+     * @param string $sku
+     * @return null|ProductInterface
+     */
     public function find(string $sku): ?ProductInterface
     {
         $product = $this->memoryStore->$sku;
