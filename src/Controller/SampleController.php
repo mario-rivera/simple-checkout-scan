@@ -35,7 +35,7 @@ class SampleController
         $total = $this->checkout->total();
 
         $response = $this->container->get(ResponseInterface::class);
-        $response->getBody()->write("Total for (" . implode(",", $productsToScan) . ") is {$total}");
+        $response->getBody()->write("Total for (" . implode(",", $productsToScan) . ") is {$total}". PHP_EOL);
         return $response->withStatus(200);
     }
 
@@ -47,7 +47,7 @@ class SampleController
         $total = $this->checkout->total();
 
         $response = $this->container->get(ResponseInterface::class);
-        $response->getBody()->write("Total for (" . implode(",", $productsToScan) . ") is {$total}");
+        $response->getBody()->write("Total for (" . implode(",", $productsToScan) . ") is {$total}". PHP_EOL);
         return $response->withStatus(200);
     }
 
@@ -59,7 +59,7 @@ class SampleController
         $total = $this->checkout->total();
 
         $response = $this->container->get(ResponseInterface::class);
-        $response->getBody()->write("Total for (" . implode(",", $productsToScan) . ") is {$total}");
+        $response->getBody()->write("Total for (" . implode(",", $productsToScan) . ") is {$total}" . PHP_EOL);
         return $response->withStatus(200);
     }
 }
